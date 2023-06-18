@@ -38,7 +38,6 @@ class Solution {
             al.add(i);
         }
         Collections.sort(al, Comparator.reverseOrder());
-        
         int a[] = new int[k];
         for(int i=0; i<k; i++){
             a[i] = al.get(i);
