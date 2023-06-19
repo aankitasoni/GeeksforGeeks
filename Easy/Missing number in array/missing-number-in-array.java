@@ -30,30 +30,13 @@ class GFG {
 class Solution {
     int missingNumber(int array[], int n) {
         
-        
-        
         int sum = (n*(n+1)/2);
         for(int i : array){
             sum -= i;
         }
         return sum;
         
-        
     }
 }
 
-
-        
-        
-        // Arrays.sort(array);
-        //  int a = 0;
-        // for (int i =0; i < array.length; i++){
-        //     if(array[i] != i+1){
-        //         return i+1;
-        //         // a += i+1;
-        //     }
-        // }
-        // return a;
-        
-        
         
