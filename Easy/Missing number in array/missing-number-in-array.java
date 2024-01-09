@@ -29,14 +29,14 @@ class GFG {
 
 class Solution {
     int missingNumber(int array[], int n) {
-        
-        int sum = (n*(n+1)/2);
-        for(int i : array){
-            sum -= i;
+        int tsum =0;
+        int sum =0;
+        for (int i =0; i < array.length; i++){
+            sum += array[i];
         }
-        return sum;
-        
+        for (int i =1; i <= n; i++){
+            tsum += i;
+        }
+        return tsum-sum;
     }
 }
-
-        
