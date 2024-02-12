@@ -31,7 +31,11 @@ class Main
 
 
 class Solution{
-    static int search(int arr[], int N, int X){
+        
+    static int search(int arr[], int N, int X)
+    {
+        
+        // Your code here
         ArrayList<Integer> al = new ArrayList<>();
         for (int i: arr){
             al.add(i);
