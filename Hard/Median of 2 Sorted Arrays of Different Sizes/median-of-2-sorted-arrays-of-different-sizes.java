@@ -37,17 +37,19 @@ class GFG
 { 
     static double medianOfArrays(int n, int m, int a[], int b[]) 
     {
-        int p = n+m;
-        int arr[] = new int[p];
-        System.arraycopy(a,0, arr, 0, n);
-        System.arraycopy(b, 0, arr, n, m);
-        Arrays.sort(arr);
-        if (p%2 == 0){
-            double e = (double)(arr[p/2]+arr[(p-1)/2])/2;
-            return e;
-        } else {
-            return arr[(p)/2];
+        // Your Code Here9
+        ArrayList<Integer> al = new ArrayList<>();
+        for (int i  :  a){
+            al.add(i);
         }
-        
+        for (int i : b){
+            al.add(i);
+        }
+        Collections.sort(al);
+        int p = al.size();
+        if (p % 2 == 0){
+            return (double)(al.get(p/2) + al.get((p/2) - 1))/2;
+        }
+        return al.get(p/2);
     }
 }
